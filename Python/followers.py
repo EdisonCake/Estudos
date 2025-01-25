@@ -5,8 +5,8 @@ from getpass import getpass
 L = instaloader.Instaloader()
 
 # Coleta as credenciais do usuário
-usuario = "edisoncake"
-senha = "HappierThanEver@123"
+usuario = ""
+senha = ""
 
 # Tenta fazer o login
 try:
