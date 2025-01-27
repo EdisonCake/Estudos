@@ -121,6 +121,12 @@ body {
 .fundo-5 {
     background-image: url(../imagens/fundo-5.jpg);
 }
+.fundo-6 {
+    background-image: url(../imagens/fundo-6.jpg);
+}
+.fundo-7 {
+    background-image: url(../imagens/fundo-7.jpg);
+}
 
 .btn-seta {
     background-color: #ffffff;
