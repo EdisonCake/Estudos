@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egg Timer - Menu Page</title>
+
+    <link rel="stylesheet" href="./src/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Cabeçalho do site -->
+    <header>
+        <h1>Egg Timer - Menu Homepage</h1>
+    </header>
+
+    <!-- Conteúdo principal do site -->
+    <div class="main-content">
+        <div class="square">
+            <div class="main-page">
+
+                <div class="egg"></div>
+
+                <div id="main" class="">
+                    <p>Let's time your egg!</p>
+                    <span>
+                        <button id="start">Start</button>
+                    </span>
+                </div>
+                
+                <div id="menu" class="hidden">
+
+                    <p>Select egg type</p>
+                    <div id="options" class="">
+                        <button onclick="startTimer(3)" id="button-1">Soft (3 min.)</button>
+                        <button onclick="startTimer(5)" id="button-2">Medium (5 min.)</button>
+                        <button onclick="startTimer(7)" id="button-3">Hard (7 min.)</button>
+                        <button onclick="startTimer(10)" id="button-4">Extra Hard (10 min.)</button>
+                    </div>
+                </div>
+
+                <div id="timer" class="hidden">
+
+                    00:00
+
+                </div>
+
+                <button id="back" class="hidden">Voltar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
