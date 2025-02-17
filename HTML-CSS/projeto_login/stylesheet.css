@@ -1,0 +1,109 @@
+body {
+    background-color: #ff99c8;
+    font-family: "Nunito", serif;
+    color: #d0f4de;
+    text-align: center;
+    font-size: 36px;
+}
+
+.header p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.main { 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.login .information .image-box img {
+    height: 150px;
+    border-radius: 50%;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.information {
+    border-radius: 10px;
+    width: 600px;
+    background: #f0bccd;
+    padding: 15px;
+}
+
+.username,
+.password,
+.confirm,
+.confirm-password,
+.email {
+    padding-bottom: 6px;
+    line-height: 0.6;
+}
+
+
+
+.information input {
+    background-color: #e0aaff;
+    color: #fff;
+    width: 50%;
+    padding: 10px;
+    paint-order: none;
+    border-radius: 30px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+.information button {
+    background-color: whitesmoke;
+    color: #8b8c89;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    gap: 15px;
+}
+
+.information .password {
+    justify-content: center;
+    position: relative;
+}
+
+.information button:hover {
+    transform: scale(1.2);
+}
+
+input::placeholder {
+    color: white;
+}
+
+.login .password img {
+    height: 25px;
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+    cursor: pointer;
+}
+
+.signup .information h1 {
+    font-size: 32px;
+    color: white;
+}
+
+.signup .information p {
+    font-size: 16px;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}

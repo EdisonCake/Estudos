@@ -1,0 +1,48 @@
+/* reset.css */
+  
+  /* Ajusta tipografia */
+  body, button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.5;
+    color: inherit;
+  }
+  
+  /* Remove decoração de links */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Remove bullets e padding de listas */
+  ul, ol {
+    list-style: none;
+  }
+  
+  /* Reseta tabelas */
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  /* Remove espaçamento de imagens */
+  img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+  }
+  
+  /* Remove formatação de formulários */
+  button, input, select, textarea {
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+  
+  /* Remove formatação de rodapé */
+  footer {
+    display: block;
+    text-align: center;
+  }
+  

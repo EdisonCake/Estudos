@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CakeOS - Login</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <p>Welcome to CakeOS. Please, login or signup!</p>
+    </header>
+
+    <div class="main">
+
+        <div id="login" class="login">
+
+            <div class="information">
+                <div class="image-box">
+                    <img id="iconeBolo" src="src/images/cake.webp" alt="Little Happy Cake">
+                </div>
+
+                <div id="username" class="username">
+                    <input id="user" type="text" placeholder="Type username or e-mail">
+                </div>
+
+                <div class="password">
+                    <input type="password" placeholder="Type Password" id="senha" name="senha">
+                    <img id="iconeSenha" src="src/images/visibility.png" alt="Mostrar Senha">
+                </div>
+
+                <div id="confirmar" class="confirm">
+                    <button>
+                        Login
+                    </button>
+
+                    <button id="btn-signup" class="signup">
+                        Signup
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="signup" class="signup hidden">
+            <div class="information">
+                
+                <h1 id="welcome">Hi! Welcome!</h1>
+                <p id="warning">Fill in your information and let's get started!</p>
+
+                <div id="user" class="username">
+                    <input type="text" placeholder="Type username">
+                </div>
+
+                <div class="email">
+                    <input type="text" placeholder="Type e-mail">
+                </div>
+
+                <div class="password">
+                    <input id="sgn-senha" type="password" placeholder="Type Password">
+
+                </div>
+
+                <div class="confirm-password">
+                    <input id="confirmPassword" type="password" placeholder="Confirm Password">
+
+                </div>
+
+                <div class="confirm">
+                    <button id="btn-confirm">
+                        Confirm
+                    </button>
+                    <button id="btn-cancel">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
