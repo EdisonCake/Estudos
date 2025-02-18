@@ -1,80 +1,119 @@
+const iconeBolo = document.getElementById('bolo')
 
-const username = document.getElementById('user');
-const senha = document.getElementById('senha');
-const confirmaSenha = document.getElementById('confirmPassword');
-const iconeSenha = document.getElementById('iconeSenha');
-const iconeBolo = document.getElementById('iconeBolo');
-const confirmar = document.getElementById('btn-confirm')
+// Ao clicar em "Register", alterna para a página de cadastro.
+document.getElementById('register').addEventListener("click", function () {
+  var login = document.getElementById('container')
+  var signup = document.getElementById('container2')
 
-const follow = document.getElementById('btn-signup')
-const cancel = document.getElementById('btn-cancel')
-const login = document.getElementById('login')
-const signup = document.getElementById('signup')
+  if (signup.classList.contains("hidden")) {
+    signup.classList.remove("hidden", "fade-out");
+    signup.classList.add("fade-in");
+    login.classList.remove("fade-in");
+    login.classList.add("fade-out");
+    setTimeout(function () {
+      login.classList.add("hidden");
+    }, 500); // Espera a animação terminar antes de adicionar a classe hidden
+  } else {
+    login.classList.remove("hidden", "fade-out");
+    login.classList.add("fade-in");
+    signup.classList.remove("fade-in");
+    signup.classList.add("fade-out");
+    setTimeout(function () {
+      signup.classList.add("hidden");
+    }, 500); // Espera a animação terminar antes de adicionar a classe hidden
+  };
+})
 
-const senha1 = document.getElementById('sgn-senha');
-const senha2 = document.getElementById('confirmPassword');
+// Ao clicar em "cancelar", volta para a tela de login.
+document.getElementById('cancel').addEventListener("click", function () {
+  var login = document.getElementById('container')
+  var signup = document.getElementById('container2')
 
-// Evento para quando o campo de senha estiver sendo digitado
-senha.addEventListener('input', function() {
-  if (senha.value.length > 0) {
-    // Altere para o caminho da imagem que deseja exibir enquanto digita
+  if (login.classList.contains("hidden")) {
+    login.classList.remove("hidden", "fade-out");
+    login.classList.add("fade-in");
+    signup.classList.remove("fade-in");
+    signup.classList.add("fade-out");
+    setTimeout(function () {
+      signup.classList.add("hidden");
+    }, 500); // Espera a animação terminar antes de adicionar a classe hidden
+  } else {
+    signup.classList.remove("hidden", "fade-out");
+    signup.classList.add("fade-in");
+    login.classList.remove("fade-in");
+    login.classList.add("fade-out");
+    setTimeout(function () {
+      login.classList.add("hidden");
+    }, 500); // Espera a animação terminar antes de adicionar a classe hidden
+  }
+})
+
+// Ao digitar a senha, o bolinho fechará o olho.
+document.getElementById('senha').addEventListener('focus', function () {
+
+  var senha = document.getElementById('senha')
+
+  if (senha.type = 'password') {
     iconeBolo.src = 'src/images/cake-2.webp';
   } else {
-    iconeBolo.src = 'src/images/cake.webp'; // Volta para a imagem original quando o campo está vazio
-    senha.type = 'password'; // Garante que o campo volta ao tipo 'password'
-    iconeSenha.src = 'src/images/visibility.png'; // Volta para o ícone original
-  }
+    iconeBolo.src = 'src/images/cake-3.webp';
+  };
 });
 
-// Evento para quando o ícone de olho é clicado
-iconeSenha.addEventListener('click', function() {
-  if (senha.type === 'password') {
-    senha.type = 'text';
-    iconeSenha.src = 'src/images/visibility-off.png'; // Altere para o caminho do ícone de olho aberto
-    if (iconeBolo.src.endsWith('cake-2.webp')) {
-      iconeBolo.src = 'src/images/cake-3.webp'; // Altere para o caminho da imagem que deseja exibir ao mostrar a senha
-    } else {
-      iconeBolo.src = 'src/images/cake.webp';
-    }
+// Ao clicar em "mostrar senha" é exibida a senha
+document.getElementById('show-password').addEventListener('change', function () {
+  var pass = document.getElementById('senha')
+  if (this.checked) {
+    pass.type = 'text';
+    iconeBolo.src = 'src/images/cake-3.webp';
   } else {
-    senha.type = 'password';
-    iconeSenha.src = 'src/images/visibility.png'; // Altere para o caminho do ícone de olho fechado
-    iconeBolo.src = 'src/images/cake-2.webp'; // Altere para o caminho da imagem que deseja exibir ao ocultar a senha
-  }
+    pass.type = 'password';
+    iconeBolo.src = 'src/images/cake-2.webp';
+  };
 });
 
-// Evento para quando o campo de username estiver em foco
-username.addEventListener('focus', function() {
-  iconeBolo.src = 'src/images/cake.webp'; // Volta para a imagem original quando o campo de username está em foco
-}); 
-
-senha.addEventListener('focus', function() {
-    if (senha.type = 'password') {
-        iconeBolo.src = 'src/images/cake-2.webp';
-        if (iconeSenha.src === 'src/images/visibility-off.png') {
-            iconeSenha.src = 'src/images/visibility.png';
-        };
-    } else {
-        iconeBolo.src = 'src/images/cake-3.webp';
-        if (iconeSenha.src === 'src/images/visibility.png') {
-            iconeSenha.src = 'src/images/visibility-off.png';
-        };
-    };
+// Ao parar de digitar a senha, o bolinho abrirá os olhos.
+document.getElementById('username').addEventListener('focus', function () {
+  iconeBolo.src = 'src/images/cake.webp'
 })
 
-// Evento para ocultar ou exibir as páginas de login ou cadastro
-follow.addEventListener('click', function() {
-    login.classList.add('hidden')
-    signup.classList.remove('hidden')
+// Ao clicar em "esqueci minha senha", será direcionado para a página de recuperação de senha.
+document.getElementById('forgot-password').addEventListener('click', function() {
+
+  var login = document.getElementById('container')
+  var recover = document.getElementById('container3')
+
+  if (recover.classList.contains("hidden")) {
+    recover.classList.remove("hidden", "fade-out");
+    recover.classList.add("fade-in");
+    login.classList.remove("fade-in");
+    login.classList.add("fade-out");
+    setTimeout(function () {
+      login.classList.add("hidden");
+    }, 500); // Espera a animação terminar antes de adicionar a classe hidden
+  } else {
+    login.classList.remove("hidden", "fade-out");
+    login.classList.add("fade-in");
+    recover.classList.remove("fade-in");
+    recover.classList.add("fade-out");
+    setTimeout(function () {
+      recover.classList.add("hidden");
+    }, 500); // Espera a animação terminar antes de adicionar a classe hidden
+  };
 })
 
-cancel.addEventListener('click', function() {
-    login.classList.remove('hidden')
-    signup.classList.add('hidden')
-})
+// Ao clicar em "enviar", será enviada a senha, exibida uma mensagem, e a página será atualizada.
+document.getElementById('send').addEventListener('click', function() {
+  var info = document.getElementById('information')
+  var mail = document.getElementById('mail')
+  var send = document.getElementById('send')
 
-// Verificando se as senhas batem na hora do cadastro
-confirmar.addEventListener('click', function() { 
-    const exibir1 = senha1.value;
-    const exibir2 = senha2.value;
+  info.classList.remove('hidden')
+  mail.classList.add('hidden')
+  send.classList.add('hidden')
+
+  setTimeout(function() {
+    location.reload();
+  }, 3000);
+  
 })

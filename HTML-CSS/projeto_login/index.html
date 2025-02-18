@@ -12,85 +12,120 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
-
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
 
-    <header>
-        <p>Welcome to CakeOS. Please, login or signup!</p>
-    </header>
+    <!-- Formulário de Login -->
+    <form id="container" class="container">
 
-    <div class="main">
+        <h1 class="login-title">Login!</h1>
 
-        <div id="login" class="login">
+        <span>
+            <img id="bolo" src="src/images/cake.webp" alt="Happy Little Cake">
+        </span>
 
-            <div class="information">
-                <div class="image-box">
-                    <img id="iconeBolo" src="src/images/cake.webp" alt="Little Happy Cake">
-                </div>
+        <section class="input-box">
+            <input id="username" type="text" name="username" placeholder="Username">
+            <i class="bx bx-cake"></i>
+        </section>
+        <section class="input-box">
+            <input id="senha" type="password" name="password" placeholder="Password">
+            <i class="bx bxs-lock"></i>
+        </section>
 
-                <div id="username" class="username">
-                    <input id="user" type="text" placeholder="Type username or e-mail">
-                </div>
-
-                <div class="password">
-                    <input type="password" placeholder="Type Password" id="senha" name="senha">
-                    <img id="iconeSenha" src="src/images/visibility.png" alt="Mostrar Senha">
-                </div>
-
-                <div id="confirmar" class="confirm">
-                    <button>
-                        Login
-                    </button>
-
-                    <button id="btn-signup" class="signup">
-                        Signup
-                    </button>
-                </div>
+        <section class="show-password-box">
+            <div class="show-password">
+                <input id="show-password" type="checkbox" name="show-password" id="show-password">
+                <label for="show-password">
+                    <h5>Show password</h5>
+                </label>
             </div>
-        </div>
+        </section>
 
-        <div id="signup" class="signup hidden">
-            <div class="information">
-                
-                <h1 id="welcome">Hi! Welcome!</h1>
-                <p id="warning">Fill in your information and let's get started!</p>
-
-                <div id="user" class="username">
-                    <input type="text" placeholder="Type username">
-                </div>
-
-                <div class="email">
-                    <input type="text" placeholder="Type e-mail">
-                </div>
-
-                <div class="password">
-                    <input id="sgn-senha" type="password" placeholder="Type Password">
-
-                </div>
-
-                <div class="confirm-password">
-                    <input id="confirmPassword" type="password" placeholder="Confirm Password">
-
-                </div>
-
-                <div class="confirm">
-                    <button id="btn-confirm">
-                        Confirm
-                    </button>
-                    <button id="btn-cancel">
-                        Cancel
-                    </button>
-                </div>
+        <section class="remember-forgot-box">
+            <div class="remember-me">
+                <input itemid="remember-me" type="checkbox" name="remember-me" id="remember-me">
+                <label for="remember-me">
+                    <h5>Remember me!</h5>
+                </label>
             </div>
 
-        </div>
+            <a id="forgot-password" href="#" class="forgot-password">
+                <h5>Forgot password?</h5>
+            </a>
+        </section>
 
-    </div>
+
+        <button id="login-button" class="login-button" type="submit">
+            Login
+        </button>
+
+        <h5 class="dont-have-an-account">
+            Don't have an account?
+            <a id="register" href="#"><b>Register</b></a>
+        </h5>
+
+    </form>
+
+    <!-- Formulário de Registro -->
+    <form id="container2" class="container2 hidden">
+
+        <h1 class="signup-title">
+            Sign up!
+        </h1>
+
+        <section class="input-box">
+            <input id="username" type="text" name="username" placeholder="Username">
+            <i class="bx bx-cake"></i>
+        </section>
+
+        <section class="input-box">
+            <input id="email" type="email" name="email" placeholder="E-mail">
+            <i class="bx bx-envelope"></i>
+        </section>
+
+        <section class="input-box">
+            <input id="password" type="password" name="password" placeholder="Password">
+            <i class="bx bxs-lock"></i>
+        </section>
+
+        <button class="signup-button">
+            Create Account
+        </button>
+
+        <button id="cancel" class="cancel">
+            Cancel
+        </button>
+
+    </form>
+
+    <!-- Formulário de "Esqueci minha senha" -->
+    <form id="container3" class="container3 hidden">
+
+        <h1 class="recover-title">
+            Let's recover your password!
+        </h1>
+
+        <section id="mail" class="input-box">
+            <input type="email" name="email" id="email" placeholder="E-mail">
+            <i class="bx bx-cake"></i>
+        </section>
+
+        <button id="send" class="send-button">
+            Send
+        </button>
+
+        <section id="information" class="information hidden">
+            <h4>
+                A recover password was sent to your e-mail. Please check your inbox.
+            </h4>
+        </section>
+
+    </form>
 
     <script src="script.js"></script>
-
 </body>
 
 </html>
